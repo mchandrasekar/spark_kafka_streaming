@@ -1,0 +1,15 @@
+{
+  "mqlight_lookup_url": "https://mqlight-lookup-prod01.messagehub.services.us-south.bluemix.net/Lookup?serviceId=1a311c9e-273e-4942-9dc1-2f6ed126ae24",
+  "api_key": "A5TtBHPEXrFfzzh5wD7YigNfsUpa4H4SvpwtnpnrQPtZ6UNt",
+  "kafka_admin_url": "https://kafka-admin-prod01.messagehub.services.us-south.bluemix.net:443",
+  "kafka_rest_url": "https://kafka-rest-prod01.messagehub.services.us-south.bluemix.net:443",
+  "kafka_brokers_sasl": [
+    "kafka01-prod01.messagehub.services.us-south.bluemix.net:9093",
+    "kafka02-prod01.messagehub.services.us-south.bluemix.net:9093",
+    "kafka03-prod01.messagehub.services.us-south.bluemix.net:9093",
+    "kafka04-prod01.messagehub.services.us-south.bluemix.net:9093",
+    "kafka05-prod01.messagehub.services.us-south.bluemix.net:9093"
+  ],
+  "user": "A5TtBHPEXrFfzzh5",
+  "password": "wD7YigNfsUpa4H4SvpwtnpnrQPtZ6UNt"
+}

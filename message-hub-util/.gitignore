@@ -1,0 +1,13 @@
+./bin/
+./project/project
+./project/target
+./target/
+.settings
+.project
+.ensime
+.ensime_cache/
+.classpath
+.cache-main
+*.parquet
+./metastore_db/
+./derby.log
