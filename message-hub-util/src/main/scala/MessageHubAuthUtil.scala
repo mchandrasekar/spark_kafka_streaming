@@ -23,21 +23,16 @@ object MessageHubAuthUtil {
     (__ \ "kafka_brokers_sasl").read[Array[String]])(MessageHubConfig.apply _)
 
   def readMessageHubVcap = {
-    var is: InputStream = null
-    is = getClass.getClassLoader.getResourceAsStream("vcap_messagehub.json")
+    var is: InputStream = getClass.getClassLoader.getResourceAsStream("vcap_messagehub.json")
     val confString: String = Source.fromInputStream(is).mkString
-    val jsonNode = Json.parse(confString)
-    val id = (jsonNode \ "user").as[String]
     messageHubConfig = Json.parse(confString).as[MessageHubConfig](documentReader)
   }
 
   def getKafkaBrokers: String = {
     if (null == messageHubConfig) {
       readMessageHubVcap
-      messageHubConfig.kafka_brokers_sasl.mkString(",") 
-    } else {
-      messageHubConfig.kafka_brokers_sasl.mkString(",")
     }
+    messageHubConfig.kafka_brokers_sasl.mkString(",")
   }
 
   def authenticate() = {
